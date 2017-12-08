@@ -3,13 +3,13 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  /* animation: App-logo-spin infinite 20s linear; */
   height: 80px;
 }
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 120px;
   padding: 20px;
   color: white;
 }
@@ -26,3 +26,23 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+/* ////what I am adding///// */
+
+div {
+  justify-content: center;
+}
+
+.header {
+  background: black;
+  color: white;
+  justify-content: center;
+
+}
+
+
+.movie-data {
+  background: lime;
+}
+

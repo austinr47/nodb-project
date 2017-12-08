@@ -1,34 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
+import Component1 from './component1'
 
 class App extends Component {
-  constructor(){
-    super()
-    this.state = {
-      picture: ''
-    }
-  }
-
-  componentDidMount(){
-    axios.get('http://localhost:3535/api/test').then(response => {
-      console.log(response);
-      this.setState ({
-        picture: response.data
-      })
-    })
-  }
+  
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={this.state.picture} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <img src='https://www.northpennymca.org/content/wp-content/uploads/2017/04/Movie-Night.jpg' className="App-logo" alt="logo" />
+              <h1 className="App-title">MOVE NIGHT PLANNER!!!</h1>
+            </header>
+        <div className='movie-data'>
+          <Component1 />
+        </div>
       </div>
     );
   }

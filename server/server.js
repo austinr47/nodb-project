@@ -8,7 +8,10 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-app.get('/api/test', ctrl.test)
+app.post('', ctrl.create)
+app.get('/api/test', ctrl.read)
+app.put('', ctrl.update)
+app.delete('', ctrl.delete)
 
 const PORT = 3000;
 app.listen(PORT, () => console.log('we are listening on port ' + PORT));
