@@ -27,8 +27,10 @@ class App extends Component {
         } 
         
         addToWatchlist(i){
+          let newMovies = this.state.watchMovies
+          newMovies.push(this.state.movies[i])
             this.setState({
-                watchMovies: this.state.watchMovies.push(this.state.movies[i])
+                watchMovies: newMovies
             })
             console.log(this.state.watchMovies)
         }
@@ -52,7 +54,7 @@ class App extends Component {
               My Awesome Watchlist
               <div className='clearList'>
                 <button className='button'>Clear List</button>
-                {/* <Component2 watchMovies={this.state.watchMovies}/> */}
+                <Component2 watchMovies={this.state.watchMovies}/>
               </div>
             </div>
           </div>
