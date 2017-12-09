@@ -3,46 +3,61 @@
 }
 
 .App-logo {
-  /* animation: App-logo-spin infinite 20s linear; */
   height: 80px;
 }
 
 .App-header {
-  background-color: #222;
   height: 120px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-
 /* ////what I am adding///// */
 
-div {
-  justify-content: center;
-}
-
 .header {
-  background: black;
-  color: white;
   justify-content: center;
-
+  display: flex;
+  padding: 2em;
 }
 
-
-.movie-data {
-  background: lime;
+.body {
+  width: 60em;
+  justify-content: space-around;
+  display: flex;
 }
 
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main1 {
+  background: black
+}
+
+.movieData {
+  font-weight: bold;
+  color: red;
+  background: rgb(201, 197, 197);
+  padding: 3em;
+}
+
+.data {
+  margin-top: 3em;
+}
+
+.watchMe {
+  font-weight: bold;
+  color: blue;
+  background: rgb(201, 197, 197);
+  padding: 3em;
+}
+
+.clearList {
+  justify-content: center;
+  display: flex;
+}
+
+.button {
+  justify-content: center;
+}

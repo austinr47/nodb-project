@@ -1,42 +1,36 @@
 import React, { Component } from 'react';
 import './App.css';
-import axios from 'axios';
 
 class Component1 extends Component {
     constructor(props) {
         super(props)
         this.state ={
-            movies: [],
-            picture: '',
-            title: '',
-            
+            userInput: 'aa',
         }
     }
-    
-      componentDidMount(){
-        axios.get('http://www.omdbapi.com/?s=the+blind+side&apikey=97ad0e64').then(response => {
-          console.log(response.data.Search);
-          this.setState({
-              movies: response.data.Search
-          })
-        })
-      }
+
       render() {
-          const movieArr = this.state.movies.map((elem) =>{
+        //   console.log(this.props.movies)
+          const movieArr = this.props.movies.map((elem, i) =>{
                 return(  
-                <div key = {elem}>
-                    <p>{elem.Title}</p>
-                </div>
+                    <div key={i}>
+                        <div className='data'>
+                            <p>Title: {elem.Title}</p>
+                            <p>Year: {elem.Year}</p>
+                            <button onClick={() => this.props.addToWatchlist(i)}>Add to Watchlist</button>
+                            <hr className='data'/>
+                        </div>
+                    </div>
                 )}
         )
+
         return (
-            <div className='result-panel'>
             <div>
-                {/* <input /> */}
-            </div>
-            <div>
-                {movieArr}
-            </div>
+                <div>
+                    <input placeholder='Title' onChange={(event) => {this.setState({userInput: event.target.value})}} />
+                    <button onClick={() => {this.props.getMovies(this.state.userInput)}}>Get Movies</button>
+                    {movieArr}
+                </div>
           </div>
         );
       }

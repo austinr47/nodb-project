@@ -1,7 +1,4 @@
 module.exports = {
-    test(req, res){
-        res.status(200).send('http://www.omdbapi.com/?s=the+blind+side&apikey=97ad0e64');
-    },
 
     create(req, res) {
         console.log('You sent me this data', req.body);
