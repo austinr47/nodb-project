@@ -52,14 +52,4 @@
   background: rgb(201, 197, 197);
   padding: 3em;
   justify-content: center;
-  display: flex;
-}
-
-.clearList {
-  justify-content: center;
-  display: flex;
-}
-
-.button {
-  justify-content: center;
 }

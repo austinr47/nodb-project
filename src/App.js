@@ -13,6 +13,7 @@ class App extends Component {
         userInput: 'aa',
         watchMovies: [],
     }
+    
     this.getMovies = this.getMovies.bind(this);
     this.addToWatchlist = this.addToWatchlist.bind(this);
 
@@ -49,11 +50,9 @@ class App extends Component {
                   My Awesome Watchlist
               </div>
               <div>
-                  <button className='button'>Clear List</button>
+                  <button>Clear List</button>
               </div>
-              <div className='clearList'>
-                <div>
-                </div> 
+              <div>
                 <div>
                   <WatchlistAdd watchMovies={this.state.watchMovies}/>
                 </div>  
