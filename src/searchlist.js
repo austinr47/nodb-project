@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class Component1 extends Component {
+class SearchList extends Component {
     constructor(props) {
         super(props)
         this.state ={
@@ -36,5 +36,5 @@ class Component1 extends Component {
       }
     }
     
-    export default Component1;
+    export default SearchList;
     

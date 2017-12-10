@@ -1,7 +1,8 @@
 import React, { Component } from 'react'; 
 import './App.css';
-import Component1 from './component1'
-import Component2 from './component2'
+import SearchList from './searchlist'
+import WatchlistAdd from './watchlistadd'
+import Header from './header'
 import axios from 'axios';
 
 class App extends Component {
@@ -37,24 +38,25 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className='main main1'>
-        <div className='header'>
-          <header className='App-header App'>
-            <img src='https://www.northpennymca.org/content/wp-content/uploads/2017/04/Movie-Night.jpg' className="App-logo" alt="logo" />
-                <h1>MOVE NIGHT PLANNER!!!</h1>
-          </header>
-        </div>
-        </div>
+        <Header />
         <div className='main'>
           <div className='body'>
             <div className='movieData'>
-              <Component1 getMovies={this.getMovies} addToWatchlist={this.addToWatchlist} movies={this.state.movies}/> 
+              <SearchList getMovies={this.getMovies} addToWatchlist={this.addToWatchlist} movies={this.state.movies}/> 
             </div>
             <div className='watchMe'> 
-              My Awesome Watchlist
+              <div>
+                  My Awesome Watchlist
+              </div>
+              <div>
+                  <button className='button'>Clear List</button>
+              </div>
               <div className='clearList'>
-                <button className='button'>Clear List</button>
-                <Component2 watchMovies={this.state.watchMovies}/>
+                <div>
+                  <WatchlistAdd watchMovies={this.state.watchMovies}/>
+                </div> 
+                <div>
+                </div>  
               </div>
             </div>
           </div>

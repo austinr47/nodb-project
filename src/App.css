@@ -51,6 +51,8 @@
   color: blue;
   background: rgb(201, 197, 197);
   padding: 3em;
+  justify-content: center;
+  display: flex;
 }
 
 .clearList {

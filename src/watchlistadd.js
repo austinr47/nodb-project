@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class Component2 extends Component {
-    constructor(props) {
-        super(props)
-    }
+class WatchlistAdd extends Component {
+
     render() {
         // {console.log(this.props.watchMovies)}
         const watchArr = this.props.watchMovies.map((elem, i) => {
@@ -26,4 +24,4 @@ class Component2 extends Component {
         )
     }
 }
-export default Component2;
+export default WatchlistAdd;
