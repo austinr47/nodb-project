@@ -53,9 +53,9 @@ class App extends Component {
               </div>
               <div className='clearList'>
                 <div>
-                  <WatchlistAdd watchMovies={this.state.watchMovies}/>
                 </div> 
                 <div>
+                  <WatchlistAdd watchMovies={this.state.watchMovies}/>
                 </div>  
               </div>
             </div>

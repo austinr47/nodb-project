@@ -2,7 +2,7 @@ module.exports = {
 
     create(req, res) {
         console.log('You sent me this data', req.body);
-
+        
         res.json()
     },
 
