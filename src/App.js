@@ -1,9 +1,10 @@
 import React, { Component } from 'react'; 
 import './App.css';
-import SearchList from './searchlist'
-import WatchlistAdd from './watchlistadd'
-import Header from './header'
-import Bars from './bars'
+import SearchList from './searchlist';
+import WatchlistAdd from './watchlistadd';
+import Header from './header';
+import Bars from './bars';
+import ButtonClear from './clearlist';
 import axios from 'axios';
 
 class App extends Component {
@@ -82,12 +83,17 @@ class App extends Component {
                   My Awesome Watchlist
               </div>
               <div className='clearButton'>
-                  <button onClick={() => {this.clearList()}}>Clear List</button>
+                  {/* <button onClick={() => {this.clearList()}}>Clear List</button> */}
+                  <ButtonClear clearList={this.clearList}/>
               </div>
               <div>
                 <div>
                   <WatchlistAdd changeToWatched={this.changeToWatched} watchMovies={this.state.watchMovies} removeFromWatchlist={this.removeFromWatchlist} getMovies={this.getMovies} addToWatchlist={this.addToWatchlist} movies={this.state.movies}/>
                 </div>  
+              </div>
+              <div className='clearButton'>
+                  {/* <button onClick={() => {this.clearList()}}>Clear List</button> */}
+                  <ButtonClear clearList={this.clearList}/>
               </div>
             </div>
           </div>
