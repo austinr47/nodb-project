@@ -24,8 +24,8 @@ class SearchList extends Component {
         )
 
         return (
-            <div>
-                <div className='searchTitle'>
+            <div className='searchbox'>
+                <div className='watch2'>
                     Search Movies
                 </div>
                 <div>

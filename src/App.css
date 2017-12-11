@@ -2,12 +2,17 @@
   text-align: center;
 }
 
-body {
+/* body {
   background: rgba(102, 100, 100, 0.596);
+} */
+
+body {
+  background-image: url("https://s31.postimg.org/gor7fsrmj/image.png");
 }
 
 .App-logo {
-  height: 80px;
+  height: 100px;
+  border-radius: 20%;
 }
 
 .App-header {
@@ -34,13 +39,15 @@ body {
 }
 
 .main1 {
-  background: black
+  background: black;
+  /* background-image: url("http://weclipart.com/gimg/559C3A5A9DF52263/Movie-reel-film-reel-clip-art-clipart-clipart.png"); */
 }
 
 .movieData {
   font-weight: bold;
   background: rgb(201, 197, 197);
   padding: 3em;
+  opacity: 0.96;
 }
 
 .data {
@@ -52,23 +59,36 @@ body {
   color: blue;
   background: rgb(201, 197, 197);
   padding: 3em;
-  justify-content: center;
   min-height: 40em;
+  min-width: 18em;
+  opacity: 0.96;
 }
 
+.watch2 {
+  font-size: 2em;
+  padding-bottom: 1em;
+  text-align: center;
+}
 
 .bar {
-  background: black;
+  background: white;
   color: grey;
   font-size: 10px;
   min-height: 3em;
 }
 
-.searchTitle {
-  text-align: center;
+.pictbar {
+  background-image: url('http://m.rgbimg.com/cache1nKVc9/users/x/xy/xymonau/600/mjaOveG.jpg');
+  /* background-repeat: repeat-x; */
+  background-size: contain;
+  /* background-size: 300px 100px; */
+}
+
+.searchbox {
+  min-width: 18em;
 }
 
 
 .clearButton {
-  text-align: center;  
+  text-align: center;
 }

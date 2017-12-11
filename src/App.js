@@ -79,8 +79,8 @@ class App extends Component {
               <SearchList getMovies={this.getMovies} addToWatchlist={this.addToWatchlist} movies={this.state.movies}/> 
             </div>
             <div className='watchMe'> 
-              <div>
-                  My Awesome Watchlist
+              <div className='watch2'>
+                  Watchlist
               </div>
               <div className='clearButton'>
                   <ButtonClear clearList={this.clearList}/>

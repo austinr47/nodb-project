@@ -7,9 +7,8 @@ class Bars extends Component {
 
     render() {
         return (
-<div className='bar'>
+<div className='bar pictbar'>
     <div>
-       Movie Search Machine
     </div>
 </div>
         )
