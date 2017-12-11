@@ -8,10 +8,15 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-app.post('', ctrl.create)
-app.get('/api/test', ctrl.read)
-app.put('', ctrl.update)
-app.delete('', ctrl.delete)
+app.post('/api/watchlist', ctrl.create)
+app.get('api/getlist', ctrl.read)
+app.put('api/watchlist/:id', ctrl.update)
+app.delete('/api/watchlist/:id', ctrl.delete)
+app.delete('/api/watchlist', ctrl.clear)
+// app.delete('/api/watchlistclear', ctrl.clear)
 
-const PORT = 3000;
+const PORT = 3005;
 app.listen(PORT, () => console.log('we are listening on port ' + PORT));
+
+// app.use(express.static( __d  irname + '/../public/build'))
+

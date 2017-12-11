@@ -4,13 +4,15 @@ import './App.css';
 class WatchlistAdd extends Component {
 
     render() {
-        const watchArr = this.props.watchMovies.map((elem, i) => {
+        const watchArr = this.props.watchMovies.map((elem) => {
         return (
-            <div key={i}>
+            <div key={elem.ID}>
             <div className='data'>
                 <p>Title: {elem.Title}</p>
                 <p>Year: {elem.Year}</p>
-                <button onClick={() => this.props.removeFromWatchlist(i)}>Remove</button>
+                <p>Watched: {elem.Watched.toString()}</p>
+                <button onClick={() => this.props.removeFromWatchlist(elem.ID)}>Remove</button>
+                {/* <button onClick={() => this.props.changeToWatched(elem.ID)}>Watched</button> */}
                 <hr className='data'/>
             </div>
         </div>)

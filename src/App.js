@@ -19,6 +19,7 @@ class App extends Component {
     this.addToWatchlist = this.addToWatchlist.bind(this);
     this.clearList = this.clearList.bind(this);
     this.removeFromWatchlist = this.removeFromWatchlist.bind(this);
+    this.changeToWatched = this.changeToWatched.bind(this);
 
 }
         getMovies(str) {
@@ -29,27 +30,42 @@ class App extends Component {
             })
         } 
         
-        addToWatchlist(i){
-          let newMovies = this.state.watchMovies
-          newMovies.push(this.state.movies[i])
-            this.setState({
-                watchMovies: newMovies
+        addToWatchlist(i, t, y){
+            axios.post('http://localhost:3005/api/watchlist', {ID: i, Title: t, Year: y}).then(response => {
+              this.setState({
+                watchMovies: response.data
+              })
             })
-        }
+          }
 
+          clearList(){
+            axios.delete('http://localhost:3005/api/watchlist').then(response => {
+              this.setState({
+                watchMovies: response.data
+              })
+            })
+          }
+          
         removeFromWatchlist(i){
-          let removeMovie = this.state.watchMovies
-          removeMovie.splice(i, 1)
-          this.setState({
-            watchMovies: removeMovie
+          axios.delete(`http://localhost:3005/api/watchlist/${i}`).then(response => {
+            this.setState({
+              watchMovies: response.data
+          })      
           })
         }
 
-        clearList(){
-          this.setState({
-            watchMovies: []
+        changeToWatched(i){
+          console.log(i)
+          axios.put(`http://localhost:3005/api/watchlist/${i}`).then(response => {
+            console.log(response)
+            this.setState({
+              watchMovies: response.data
+          })      
           })
         }
+
+
+
   render() {
     return (
       <div>

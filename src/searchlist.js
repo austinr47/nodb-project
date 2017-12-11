@@ -10,13 +10,13 @@ class SearchList extends Component {
     }
 
       render() {
-          const movieArr = this.props.movies.map((elem, i) =>{
+          const movieArr = this.props.movies.map((elem) =>{
                 return(  
-                    <div key={i}>
+                    <div key={elem.imdbID}>
                         <div className='data'>
                             <p>Title: {elem.Title}</p>
                             <p>Year: {elem.Year}</p>
-                            <button onClick={() => this.props.addToWatchlist(i)}>Add to Watchlist</button>
+                            <button onClick={() => this.props.addToWatchlist(elem.imdbID, elem.Title, elem.Year)}>Add to Watchlist</button>
                             <hr className='data'/>
                         </div>
                     </div>

@@ -9,7 +9,7 @@ class Bars extends Component {
         return (
 <div className='bar'>
     <div>
-       Movie Searching Machine
+       Movie Search Machine
     </div>
 </div>
         )
