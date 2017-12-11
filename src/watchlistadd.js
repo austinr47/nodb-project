@@ -11,8 +11,8 @@ class WatchlistAdd extends Component {
                 <p>Title: {elem.Title}</p>
                 <p>Year: {elem.Year}</p>
                 <p>Watched: {elem.Watched.toString()}</p>
+                <button onClick={() => this.props.changeToWatched(elem.ID)}>Watched</button>
                 <button onClick={() => this.props.removeFromWatchlist(elem.ID)}>Remove</button>
-                {/* <button onClick={() => this.props.changeToWatched(elem.ID)}>Watched</button> */}
                 <hr className='data'/>
             </div>
         </div>)

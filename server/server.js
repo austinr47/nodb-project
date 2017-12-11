@@ -7,10 +7,10 @@ const ctrl = require('./controller');
 app.use(bodyParser.json());
 
 app.use(cors());
-
+console.log('hi')
 app.post('/api/watchlist', ctrl.create)
-app.get('api/getlist', ctrl.read)
-app.put('api/watchlist/:id', ctrl.update)
+app.get('/api/getlist', ctrl.read)
+app.put('/api/watchlist/:id', ctrl.update)
 app.delete('/api/watchlist/:id', ctrl.delete)
 app.delete('/api/watchlist', ctrl.clear)
 // app.delete('/api/watchlistclear', ctrl.clear)

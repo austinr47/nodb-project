@@ -86,7 +86,7 @@ class App extends Component {
               </div>
               <div>
                 <div>
-                  <WatchlistAdd watchMovies={this.state.watchMovies} removeFromWatchlist={this.removeFromWatchlist} getMovies={this.getMovies} addToWatchlist={this.addToWatchlist} movies={this.state.movies}/>
+                  <WatchlistAdd changeToWatched={this.changeToWatched} watchMovies={this.state.watchMovies} removeFromWatchlist={this.removeFromWatchlist} getMovies={this.getMovies} addToWatchlist={this.addToWatchlist} movies={this.state.movies}/>
                 </div>  
               </div>
             </div>
