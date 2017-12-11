@@ -83,7 +83,6 @@ class App extends Component {
                   My Awesome Watchlist
               </div>
               <div className='clearButton'>
-                  {/* <button onClick={() => {this.clearList()}}>Clear List</button> */}
                   <ButtonClear clearList={this.clearList}/>
               </div>
               <div>
@@ -92,7 +91,6 @@ class App extends Component {
                 </div>  
               </div>
               <div className='clearButton'>
-                  {/* <button onClick={() => {this.clearList()}}>Clear List</button> */}
                   <ButtonClear clearList={this.clearList}/>
               </div>
             </div>

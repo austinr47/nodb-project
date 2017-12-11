@@ -13,10 +13,8 @@ app.get('/api/getlist', ctrl.read)
 app.put('/api/watchlist/:id', ctrl.update)
 app.delete('/api/watchlist/:id', ctrl.delete)
 app.delete('/api/watchlist', ctrl.clear)
-// app.delete('/api/watchlistclear', ctrl.clear)
 
 const PORT = 3005;
 app.listen(PORT, () => console.log('we are listening on port ' + PORT));
 
-// app.use(express.static( __d  irname + '/../public/build'))
 

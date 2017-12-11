@@ -3,7 +3,7 @@ let list = [];
 module.exports = {
 
     create(req, res) {
-        // console.log('You sent me this data', req.body);
+        console.log('You sent me this data', req.body);
         let movie = req.body
         movie.Watched = false
         list.push(movie)
@@ -25,7 +25,7 @@ module.exports = {
     },
 
     delete(req, res) {
-        // console.log('You sent me this data delete', req.params);
+        console.log('You sent me this data delete', req.params);
         list.forEach((e, i, a) => {
             if(e.ID === req.params.id) {
                 list.splice(i, 1)
@@ -36,14 +36,8 @@ module.exports = {
     },
 
     clear(req, res) {
-        // console.log('You sent me this data delete', req.params);
+        console.log('You sent me this data delete', req.params);
         list = []
         res.json(list)
     },
 }
-
-
-
-
-
-// http://www.omdbapi.com/?PUT+THE+ENDPOINT+HERE&apikey=97ad0e64
