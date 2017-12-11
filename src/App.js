@@ -22,9 +22,7 @@ class App extends Component {
 
 }
         getMovies(str) {
-          // console.log(str)
             axios.get(`http://www.omdbapi.com/?s=${str}&apikey=97ad0e64`).then(response => {
-                // console.log(response.data);
                 this.setState({
                     movies: response.data.Search
                 })
@@ -37,7 +35,6 @@ class App extends Component {
             this.setState({
                 watchMovies: newMovies
             })
-            // console.log(this.state.watchMovies)
         }
 
         removeFromWatchlist(i){
@@ -87,3 +84,8 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+//not interested button for a .delete
+//watched button for a .put

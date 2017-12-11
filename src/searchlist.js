@@ -10,7 +10,6 @@ class SearchList extends Component {
     }
 
       render() {
-        //   console.log(this.props.movies)
           const movieArr = this.props.movies.map((elem, i) =>{
                 return(  
                     <div key={i}>

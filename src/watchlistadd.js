@@ -4,7 +4,6 @@ import './App.css';
 class WatchlistAdd extends Component {
 
     render() {
-        // {console.log(this.props.watchMovies)}
         const watchArr = this.props.watchMovies.map((elem, i) => {
         return (
             <div key={i}>
