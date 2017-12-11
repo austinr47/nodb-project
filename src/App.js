@@ -42,7 +42,6 @@ class App extends Component {
 
         removeFromWatchlist(i){
           let removeMovie = this.state.watchMovies
-          console.log(removeMovie)
           removeMovie.splice(i, 1)
           this.setState({
             watchMovies: removeMovie
@@ -74,7 +73,7 @@ class App extends Component {
               </div>
               <div>
                 <div>
-                  <WatchlistAdd watchMovies={this.state.watchMovies}/>
+                  <WatchlistAdd watchMovies={this.state.watchMovies} removeFromWatchlist={this.removeFromWatchlist} getMovies={this.getMovies} addToWatchlist={this.addToWatchlist} movies={this.state.movies}/>
                 </div>  
               </div>
             </div>
