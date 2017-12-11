@@ -11,6 +11,7 @@ class WatchlistAdd extends Component {
             <div className='data'>
                 <p>Title: {elem.Title}</p>
                 <p>Year: {elem.Year}</p>
+                <button onClick={() => this.props.removeFromWatchlist(i)}>Remove</button>
                 <hr className='data'/>
             </div>
         </div>)

@@ -18,6 +18,7 @@ class App extends Component {
     this.getMovies = this.getMovies.bind(this);
     this.addToWatchlist = this.addToWatchlist.bind(this);
     this.clearList = this.clearList.bind(this);
+    this.removeFromWatchlist = this.removeFromWatchlist.bind(this);
 
 }
         getMovies(str) {
@@ -36,7 +37,16 @@ class App extends Component {
             this.setState({
                 watchMovies: newMovies
             })
-            console.log(this.state.watchMovies)
+            // console.log(this.state.watchMovies)
+        }
+
+        removeFromWatchlist(i){
+          let removeMovie = this.state.watchMovies
+          console.log(removeMovie)
+          removeMovie.splice(i, 1)
+          this.setState({
+            watchMovies: removeMovie
+          })
         }
 
         clearList(){
