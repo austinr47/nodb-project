@@ -28,8 +28,8 @@ class SearchList extends Component {
                 <div className='watch2'>
                     Search Movies
                 </div>
-                <div>
-                    <input placeholder='Title' onChange={(event) => {this.setState({userInput: event.target.value})}} />
+                <div className='mumbble'>
+                    <input className='textField' placeholder='Title' onChange={(event) => {this.setState({userInput: event.target.value})}} />
                     <button onClick={() => {this.props.getMovies(this.state.userInput)}}>Get Movies</button>
                     {movieArr}
                 </div>
