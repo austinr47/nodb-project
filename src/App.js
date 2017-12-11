@@ -3,6 +3,7 @@ import './App.css';
 import SearchList from './searchlist'
 import WatchlistAdd from './watchlistadd'
 import Header from './header'
+import Bars from './bars'
 import axios from 'axios';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
     
     this.getMovies = this.getMovies.bind(this);
     this.addToWatchlist = this.addToWatchlist.bind(this);
+    this.clearList = this.clearList.bind(this);
 
 }
         getMovies(str) {
@@ -36,8 +38,16 @@ class App extends Component {
             })
             console.log(this.state.watchMovies)
         }
+
+        clearList(){
+          this.setState({
+            watchMovies: []
+          })
+        }
   render() {
     return (
+      <div>
+        <Bars />
       <div>
         <Header />
         <div className='main'>
@@ -49,8 +59,8 @@ class App extends Component {
               <div>
                   My Awesome Watchlist
               </div>
-              <div>
-                  <button>Clear List</button>
+              <div className='clearButton'>
+                  <button onClick={() => {this.clearList()}}>Clear List</button>
               </div>
               <div>
                 <div>
@@ -60,6 +70,8 @@ class App extends Component {
             </div>
           </div>
         </div>
+      </div>
+      <Bars />
       </div>
     );
   }

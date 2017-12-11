@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background: rgba(102, 100, 100, 0.596);
+}
+
 .App-logo {
   height: 80px;
 }
@@ -12,12 +16,10 @@
   color: white;
 }
 
-/* ////what I am adding///// */
-
 .header {
   justify-content: center;
   display: flex;
-  padding: 2em;
+  padding: 0 1em 2em ;
 }
 
 .body {
@@ -37,13 +39,12 @@
 
 .movieData {
   font-weight: bold;
-  color: red;
   background: rgb(201, 197, 197);
   padding: 3em;
 }
 
 .data {
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
 .watchMe {
@@ -52,4 +53,22 @@
   background: rgb(201, 197, 197);
   padding: 3em;
   justify-content: center;
+  min-height: 40em;
+}
+
+
+.bar {
+  background: black;
+  color: grey;
+  font-size: 10px;
+  min-height: 3em;
+}
+
+.searchTitle {
+  text-align: center;
+}
+
+
+.clearButton {
+  text-align: center;  
 }

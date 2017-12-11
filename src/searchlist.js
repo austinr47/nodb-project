@@ -26,6 +26,9 @@ class SearchList extends Component {
 
         return (
             <div>
+                <div className='searchTitle'>
+                    Search Movies
+                </div>
                 <div>
                     <input placeholder='Title' onChange={(event) => {this.setState({userInput: event.target.value})}} />
                     <button onClick={() => {this.props.getMovies(this.state.userInput)}}>Get Movies</button>
