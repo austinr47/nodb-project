@@ -2,12 +2,8 @@
   text-align: center;
 }
 
-/* body {
-  background: rgba(102, 100, 100, 0.596);
-} */
-
 body {
-  background-image: url("https://s31.postimg.org/gor7fsrmj/image.png");
+  background: white;
 }
 
 .App-logo {
@@ -36,11 +32,11 @@ body {
 .main {
   display: flex;
   justify-content: space-around;
+  background-image: url("https://s31.postimg.org/gor7fsrmj/image.png");
 }
 
 .main1 {
   background: black;
-  /* background-image: url("http://weclipart.com/gimg/559C3A5A9DF52263/Movie-reel-film-reel-clip-art-clipart-clipart.png"); */
 }
 
 .movieData {
@@ -79,9 +75,7 @@ body {
 
 .pictbar {
   background-image: url('http://m.rgbimg.com/cache1nKVc9/users/x/xy/xymonau/600/mjaOveG.jpg');
-  /* background-repeat: repeat-x; */
   background-size: contain;
-  /* background-size: 300px 100px; */
 }
 
 .searchbox {
@@ -100,3 +94,6 @@ body {
   border-radius: 20px;
   margin: 0 3em 0 2em;
 }
+
+
+

@@ -8,7 +8,7 @@ class HeaderMedia extends Component {
         return (
         <div>
             <img src='https://www.northpennymca.org/content/wp-content/uploads/2017/04/Movie-Night.jpg' className="App-logo" alt="logo" />
-            <h1>MOVE NIGHT PLANNER!!!</h1>
+            <h1>MOVIE NIGHT PLANNER!!!</h1>
         </div>
         )
     }
